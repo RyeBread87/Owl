@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SendFeedback"
+    android:background="@color/primary" >
+
+    <TextView
+        android:id="@+id/feedback_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="314dp"
+        android:layout_marginBottom="@dimen/across_height_large"
+        android:text="@string/feedback_label"
+        app:layout_constraintBottom_toTopOf="@+id/submit_feedback_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/feedback_edit_text"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/left_margin_medium"
+        android:layout_marginTop="@dimen/between_margin_large"
+        android:layout_marginEnd="@dimen/right_margin_medium"
+        android:ems="10"
+        android:gravity="start|top"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:maxLength="325"
+        android:hint="@string/feedback_character_limit_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feedback_label"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/submit_feedback_button"
+        android:layout_width="@dimen/default_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/left_margin_small"
+        android:layout_marginEnd="@dimen/right_margin_small"
+        android:layout_marginBottom="@dimen/bottom_margin_small"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="submitFeedback"
+        android:text="@string/submit_feedback_button_label"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

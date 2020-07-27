@@ -1,0 +1,52 @@
+<resources>
+    <dimen name="half_fab_margin">8dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="double_fab_margin">32dp</dimen>
+
+    <dimen name="top_margin_extra_small">32dp</dimen>
+    <dimen name="top_margin_small">64dp</dimen>
+    <dimen name="top_margin_small_medium">80dp</dimen>
+    <dimen name="top_margin_medium">128dp</dimen>
+    <dimen name="top_margin_large">192dp</dimen>
+    <dimen name="top_margin_extra_large">256dp</dimen>
+
+    <dimen name="bottom_margin_extra_small">32dp</dimen>
+    <dimen name="bottom_margin_small">128dp</dimen>
+    <dimen name="bottom_margin_medium">256dp</dimen>
+    <dimen name="bottom_margin_large">384dp</dimen>
+    <dimen name="bottom_margin_extra_large">512dp</dimen>
+
+    <dimen name="left_margin_tiny">16dp</dimen>
+    <dimen name="left_margin_extra_small">24dp</dimen>
+    <dimen name="left_margin_small">32dp</dimen>
+    <dimen name="left_margin_medium">48dp</dimen>
+    <dimen name="left_margin_large">64dp</dimen>
+    <dimen name="left_margin_extra_large">192dp</dimen>
+
+    <dimen name="right_margin_tiny">16dp</dimen>
+    <dimen name="right_margin_extra_small">24dp</dimen>
+    <dimen name="right_margin_small">32dp</dimen>
+    <dimen name="right_margin_medium">48dp</dimen>
+    <dimen name="right_margin_large">64dp</dimen>
+
+    <dimen name="between_margin_extra_small">8dp</dimen>
+    <dimen name="between_margin_small">16dp</dimen>
+    <dimen name="between_margin_medium">24dp</dimen>
+    <dimen name="between_margin_large">32dp</dimen>
+
+    <dimen name="end_margin_small">64dp</dimen>
+    <dimen name="end_margin">384dp</dimen>
+    <dimen name="edge_margin_small">8dp</dimen>
+
+    <dimen name="across_height_medium">320dp</dimen>
+    <dimen name="across_height_large">384dp</dimen>
+    <dimen name="max_height">720dp</dimen>
+
+    <dimen name="cell_width_small">128dp</dimen>
+    <dimen name="cell_width_medium">160dp</dimen>
+    <dimen name="cell_width_large">192dp</dimen>
+    <dimen name="default_width">328dp</dimen>
+    <dimen name="instructions_width">340dp</dimen>
+    <dimen name="button_layout_height">320dp</dimen>
+    <dimen name="default_height">24dp</dimen>
+</resources>

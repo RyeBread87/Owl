@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MessagesFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary">
+
+        <LinearLayout
+            android:id="@+id/messages_fragment_linearlayout"
+            android:layout_width="@dimen/default_width"
+            android:layout_height="@dimen/button_layout_height"
+            android:layout_marginStart="@dimen/left_margin_small"
+            android:layout_marginTop="@dimen/top_margin_extra_small"
+            android:layout_marginEnd="@dimen/right_margin_small"
+            android:layout_marginBottom="@dimen/bottom_margin_small"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/create_message_button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:text="@string/create_message_button_label"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/select_message_button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:text="@string/select_message_button_label"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/messages_instruction_textview"
+            android:layout_width="@dimen/instructions_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/left_margin_tiny"
+            android:layout_marginTop="@dimen/between_margin_small"
+            android:layout_marginEnd="@dimen/right_margin_tiny"
+            android:text="@string/message_instructions"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/messages_fragment_linearlayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

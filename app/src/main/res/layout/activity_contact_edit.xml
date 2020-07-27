@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactEdit"
+    android:background="@color/primary" >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="600dp"
+            android:layout_marginTop="44dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/contact_edit_activity_title"
+                android:layout_width="@dimen/cell_width_small"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_margin_extra_small"
+                android:layout_marginTop="@dimen/top_margin_small"
+                android:layout_marginEnd="300dp"
+                android:layout_marginBottom="@dimen/google_1x"
+                android:text="@string/contact_info"
+                app:layout_constraintBottom_toTopOf="@+id/name_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginTop="@dimen/between_margin_small"
+                android:text="@string/name_label"
+                app:layout_constraintBottom_toTopOf="@+id/name_entry_edit_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contact_edit_activity_title" />
+
+            <EditText
+                android:id="@+id/name_entry_edit_text"
+                android:layout_width="@dimen/default_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginTop="@dimen/between_margin_extra_small"
+                android:layout_marginEnd="@dimen/right_margin_small"
+                android:autofillHints="AUTOFILL_HINT_PERSON_NAME"
+                android:ems="10"
+                android:hint="@string/name_hint"
+                android:inputType="textPersonName"
+                android:maxLength="100"
+                app:layout_constraintBottom_toTopOf="@+id/frequency_entry_edit_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contact_edit_activity_title" />
+
+            <TextView
+                android:id="@+id/frequency_label"
+                android:layout_width="106dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginTop="@dimen/between_margin_small"
+                android:text="@string/frequency_label"
+                app:layout_constraintBottom_toTopOf="@+id/frequency_entry_edit_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_entry_edit_text" />
+
+            <EditText
+                android:id="@+id/frequency_entry_edit_text"
+                android:layout_width="@dimen/default_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginTop="@dimen/between_margin_extra_small"
+                android:layout_marginEnd="@dimen/right_margin_small"
+                android:ems="10"
+                android:hint="@string/frequency_number_of_days_hint"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="4"
+                app:layout_constraintBottom_toTopOf="@+id/start_date_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_entry_edit_text" />
+
+            <TextView
+                android:id="@+id/preference_select_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginTop="@dimen/between_margin_small"
+                android:text="@string/communication_preference_select_label"
+                app:layout_constraintBottom_toTopOf="@+id/preference_spinner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/start_date_button" />
+
+            <Spinner
+                android:id="@+id/preference_spinner"
+                android:layout_width="@dimen/default_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginTop="@dimen/between_margin_extra_small"
+                android:layout_marginEnd="@dimen/right_margin_small"
+                android:popupBackground="@color/primary"
+                app:layout_constraintBottom_toTopOf="@+id/identifier_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/preference_select_label" />
+
+            <TableRow
+                android:id="@+id/selected_date_tablerow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginTop="@dimen/between_margin_medium"
+                android:layout_marginEnd="@dimen/right_margin_small"
+                app:layout_constraintBottom_toTopOf="@+id/next_alarm_tablerow"
+                app:layout_constraintTop_toBottomOf="@+id/preference_spinner">
+
+                <TextView
+                    android:id="@+id/selected_start_date_label"
+                    android:layout_width="@dimen/cell_width_small"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="0.5"
+                    android:text="@string/selected_start_date_label" />
+
+                <TextView
+                    android:id="@+id/selected_start_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="0.5"
+                    android:text="@string/space" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/next_alarm_tablerow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginTop="@dimen/between_margin_extra_small"
+                android:layout_marginEnd="@dimen/right_margin_small"
+                app:layout_constraintBottom_toTopOf="@+id/date_select_button_tablerow"
+                app:layout_constraintTop_toBottomOf="@+id/selected_date_tablerow">
+
+                <TextView
+                    android:id="@+id/next_alarm_label"
+                    android:layout_width="@dimen/cell_width_small"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="0.5"
+                    android:text="@string/next_alarm_label" />
+
+                <TextView
+                    android:id="@+id/next_alarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="0.5"
+                    android:text="@string/space" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/date_select_button_tablerow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginTop="@dimen/between_margin_extra_small"
+                android:layout_marginEnd="@dimen/right_margin_small"
+                app:layout_constraintBottom_toTopOf="@+id/phone_label"
+                app:layout_constraintTop_toBottomOf="@+id/next_alarm_tablerow">
+
+                <Button
+                    android:id="@+id/start_date_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_gravity="start"
+                    android:layout_weight="0.5"
+                    android:background="@color/colorPrimaryDark"
+                    android:onClick="showDatePickerDialog"
+                    android:text="@string/start_date_button_label"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/start_time_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_gravity="end"
+                    android:layout_weight="0.5"
+                    android:background="@color/colorPrimaryDark"
+                    android:onClick="showTimePickerDialog"
+                    android:text="@string/pick_time_button_label"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+            </TableRow>
+
+            <TextView
+                android:id="@+id/phone_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginTop="@dimen/between_margin_medium"
+                android:text="@string/phone_number_label"
+                app:layout_constraintBottom_toTopOf="@+id/phone_entry_tablerow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/date_select_button_tablerow" />
+
+            <TableRow
+                android:id="@+id/phone_entry_tablerow"
+                android:layout_width="@dimen/default_width"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginTop="@dimen/between_margin_extra_small"
+                android:layout_marginEnd="@dimen/right_margin_small"
+                app:layout_constraintBottom_toTopOf="@+id/email_label"
+                app:layout_constraintTop_toBottomOf="@+id/phone_label">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/country_picker"
+                    android:layout_width="@dimen/cell_width_small"
+                    android:layout_height="48dp"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    app:layout_constraintBottom_toTopOf="@+id/email_label"
+                    app:layout_constraintTop_toBottomOf="@id/phone_label">
+
+                </com.hbb20.CountryCodePicker>
+
+                <EditText
+                    android:id="@+id/phone_entry_edit_text"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:autofillHints="AUTOFILL_HINT_PHONE_NUMBER"
+                    android:ems="10"
+                    android:hint="@string/phone_number_hint"
+                    android:inputType="phone"
+                    android:maxLength="18"
+                    app:layout_constraintBottom_toTopOf="@+id/country_picker" />
+
+            </TableRow>
+
+            <TextView
+                android:id="@+id/email_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginTop="@dimen/between_margin_small"
+                android:text="@string/email_address_label"
+                app:layout_constraintBottom_toTopOf="@+id/email_entry_edit_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phone_entry_tablerow" />
+
+            <EditText
+                android:id="@+id/email_entry_edit_text"
+                android:layout_width="@dimen/default_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginTop="@dimen/between_margin_extra_small"
+                android:layout_marginEnd="@dimen/right_margin_small"
+                android:ems="10"
+                android:hint="@string/email_address_hint"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:maxLength="200"
+                app:layout_constraintBottom_toTopOf="@+id/identifier_label"
+                app:layout_constraintTop_toBottomOf="@id/email_label" />
+
+            <TextView
+                android:id="@+id/identifier_label"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginTop="@dimen/between_margin_small"
+                android:text="@string/faceboook_profile_link_label"
+                app:layout_constraintBottom_toTopOf="@+id/facebook_link_edit_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/preference_spinner" />
+
+            <EditText
+                android:id="@+id/facebook_link_edit_text"
+                android:layout_width="@dimen/default_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginTop="@dimen/between_margin_extra_small"
+                android:layout_marginEnd="@dimen/right_margin_small"
+                android:ems="10"
+                android:hint="@string/faceboook_profile_link_hint"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:maxLength="200"
+                android:onClick="saveContact"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/skype_name_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/identifier_label" />
+
+            <TextView
+                android:id="@+id/skype_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginTop="@dimen/between_margin_small"
+                android:text="@string/skype_name_label"
+                app:layout_constraintBottom_toTopOf="@+id/skype_name_edit_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/facebook_link_edit_text" />
+
+            <EditText
+                android:id="@+id/skype_name_edit_text"
+                android:layout_width="@dimen/default_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginTop="@dimen/between_margin_extra_small"
+                android:layout_marginEnd="@dimen/right_margin_small"
+                android:autofillHints="AUTOFILL_HINT_USERNAME"
+                android:ems="10"
+                android:hint="@string/skype_name_hint"
+                android:inputType="textPersonName"
+                android:maxLength="100"
+                app:layout_constraintBottom_toTopOf="@+id/status_switch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/skype_name_label" />
+
+            <TableRow
+                android:id="@+id/status_switch_tablerow"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_height"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginTop="@dimen/between_margin_medium"
+                android:layout_marginEnd="@dimen/right_margin_small"
+                app:layout_constraintBottom_toTopOf="@+id/save_delete_button_tablerow"
+                app:layout_constraintTop_toBottomOf="@+id/skype_name_edit_text">
+
+                <TextView
+                    android:id="@+id/status_switch_label"
+                    android:layout_width="@dimen/cell_width_large"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom|start"
+                    android:text="@string/status_switch_label"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/status_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="top"
+                    android:layout_weight="0"
+                    android:layout_marginEnd="@dimen/right_margin_large"
+                    android:theme="@style/SwitchTheme" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/save_delete_button_tablerow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginTop="@dimen/top_margin_extra_small"
+                android:layout_marginEnd="@dimen/right_margin_small"
+                android:layout_marginBottom="@dimen/bottom_margin_small"
+                app:layout_constraintTop_toBottomOf="@+id/status_switch">
+
+                <Button
+                    android:id="@+id/save_contact_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="0.5"
+                    android:background="@color/colorPrimaryDark"
+                    android:onClick="saveContact"
+                    android:text="@string/save_contact_button_label"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/delete_contact_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="0.5"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="@string/delete_contact_button_label"
+                    android:textColor="@android:color/white"
+                    android:visibility="invisible" />
+            </TableRow>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

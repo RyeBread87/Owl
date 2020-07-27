@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "478229303417",
+    "firebase_url": "https://owls-85641.firebaseio.com",
+    "project_id": "owls-85641",
+    "storage_bucket": "owls-85641.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478229303417:android:dd524f1671e5e637f004a8",
+        "android_client_info": {
+          "package_name": "com.application.owl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478229303417-udeas1et5gspipmbiiqhhcepd615n7i5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1S2fvjBMyDO30WK_gOVrRtCKNQk65sJI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478229303417-udeas1et5gspipmbiiqhhcepd615n7i5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

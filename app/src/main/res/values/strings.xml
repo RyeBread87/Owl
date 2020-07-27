@@ -1,0 +1,198 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- app & activity titles -->
+    <string name="app_name">Owl</string>
+    <string name="contacts">Contacts</string>
+    <string name="messages">Messages</string>
+    <string name="options">Options</string>
+
+    <!-- preferences -->
+    <string name="sms">SMS</string>
+    <string name="call">Call</string>
+    <string name="email">Email</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="facebook_messenger">Facebook Messenger</string>
+    <string name="skype">Skype</string>
+
+
+    <!-- contacts tab -->
+    <string name="create_contact_button_label">Create Contact</string>
+    <string name="select_contact_button_label">Select Contact</string>
+    <string name="import_contact_button_label">Import Contact</string>
+
+    <!-- contact edit activity -->
+    <string name="contact_info"><b><font size="18">Contact Info</font></b></string>
+    <string name="name_label"><b>Name:</b></string>
+    <string name="name_hint">Name</string>
+    <string name="frequency_label"><b>Frequency:</b></string>
+    <string name="frequency_number_of_days_hint"><font size="14"># of days between reminders - 14 by default</font></string>
+    <string name="communication_preference_select_label"><b>Communication Preference:</b></string>
+    <string name="selected_start_date_label"><b>First Scheduled Owl:</b></string>
+    <string name="next_alarm_label"><b>Next Scheduled Owl:</b></string>
+    <string name="start_date_button_label">Select Start Date</string>
+    <string name="pick_time_button_label">Select Start Time</string>
+    <string name="phone_number_label"><b>Phone Number:</b></string>
+    <string name="phone_number_hint">Phone Number</string>
+    <string name="email_address_label"><b>Email Address:</b></string>
+    <string name="email_address_hint">Email Address</string>
+    <string name="faceboook_profile_link_label"><b>Facebook profile link:</b></string>
+    <string name="faceboook_profile_link_hint">From Facebook profile: More > Copy link to profile</string>
+    <string name="skype_name_label"><b>Skype Name:</b></string>
+    <string name="skype_name_hint">Skype Name</string>
+    <string name="status_switch_label">Owl Reminders On or Off?</string>
+    <string name="save_contact_button_label">Save Contact</string>
+    <string name="delete_contact_button_label">Delete Contact</string>
+    <string name="contact_saved_toast">Contact Saved</string>
+    <string name="contact_deleted_toast">Contact Deleted</string>
+    <string name="owl_notifications_turned_off">Owl notifications turned off</string>
+
+    <!-- contact edit validation warnings -->
+    <string name="name_missing_toast">Name required</string>
+    <string name="name_too_long_toast">Name must be 100 characters or less</string>
+    <string name="min_frequency_toast">Frequency must be at least 1 day</string>
+    <string name="max_frequency_toast">365 days is the maximum frequency</string>
+    <string name="included_country_code_toast">Country code should be selected from drop-down, not entered into the phone number field</string>
+    <string name="phone_number_missing_toast">Phone required if SMS, Call, or WhatsApp is the selected preference</string>
+    <string name="invalid_phone_number_length_toast">Invalid phone number length</string>
+    <string name="email_address_missing_toast">E-mail is required if Email is the selected preference</string>
+    <string name="invalid_email_address_toast">Invalid E-mail address</string>
+    <string name="facebook_link_missing_toast">Facebook profile URL is required if Facebook Messenger is the selected preference</string>
+    <string name="invalid_fb_link">Facebook link must be a valid url</string>
+    <string name="fb_link_not_for_fb">Facebook link must be a url for facebook</string>
+    <string name="skype_name_missing_toast">Skype Name is required if Skype is the selected preference</string>
+    <string name="skype_name_too_long_toast">Skype name must be 100 characters or less</string>
+
+    <!-- contact select activity -->
+    <string name="contacts_label"><b><font size="18">Contacts</font></b></string>
+    <string name="no_contacts_message">No contacts created yet! Create a contact:</string>
+
+    <!-- contact import activity -->
+    <string name="search_title">Search Contacts</string>
+    <string name="contact_import_title">Search for and select a contact to import</string>
+    <string name="search_contacts_to_import">Search Contacts</string>
+    <string name="read_contact_permission_reason">READ_CONTACTS permission required to import contacts</string>
+    <string name="loading_contacts">Loading contacts</string>
+    <string name="still_loading_contacts">Still loading contacts...</string>
+
+
+    <!-- messages tab -->
+    <string name="messages_label"><b><font size="18">Messages</font></b></string>
+    <string name="create_message_button_label">Create Message</string>
+    <string name="select_message_button_label">Select Message</string>
+
+    <!-- message edit activity -->
+    <string name="edit_message_label"><b><font size="18">Message:</font></b></string>
+    <string name="space"> </string>
+    <string name="message_character_limit">Maximum 280 characters</string>
+    <string name="save_message_button_label">Save Message</string>
+    <string name="delete_message_button_label">Delete Message</string>
+    <string name="prepackaged_message_warning">Pre-packaged messages cannot be edited.</string>
+    <string name="empty_message_toast">Message text required</string>
+    <string name="message_saved_toast">Message Saved</string>
+    <string name="message_deleted_toast">Message Deleted</string>
+
+    <!-- message select activity -->
+    <string name="no_messages_message">No messages created yet! Create a message:</string>
+
+
+    <!-- options tab -->
+    <string name="toggle_all_notifications">\tTurn All Notifications On/Off</string>
+    <string name="trigger_all_notifications_now">Trigger All Notifications Now</string>
+    <string name="app_info_button_label">About Owl</string>
+    <string name="send_feedback_button_label">Send Feedback (via Email)</string>
+    <string name="privacy_info_button_label">Privacy Info</string>
+    <string name="no_active_contacts_toast">No active contacts to create Owl notifications for</string>
+
+    <!-- send feedback activity -->
+    <string name="feedback_label"><b><font size="18">Feedback:</font></b></string>
+    <string name="feedback_character_limit_hint">Maximum 325 characters - tap \'submit feedback\' to move text to email and add more if needed</string>
+    <string name="submit_feedback_button_label">Submit Feedback</string>
+    <string name="empty_feedback_toast">Feedback text empty</string>
+    <string name="feedback_email">OwlKeepInTouchAssistant@gmail.com</string>
+    <string name="feedback_subject_line">Owl Feedback</string>
+
+
+    <!-- validation toasts-->
+    <string name="email_app_toast">Email application</string>
+    <string name="select_email_app_toast">Select email app</string>
+    <string name="not_installed_toast"> is not installed. Please download the app first.</string>
+    <string name="contact_limit_toast">"Maximum number of contacts reached (%1$d). Delete contacts before adding new ones."</string>
+    <string name="message_limit_toast">"Maximum number of messages reached (%1$d). Delete messages before adding new ones."</string>
+    <string name="paste_message_from_clipboard_toast">ATTENTION: Paste message from clipboard in </string>
+
+    <!-- notification text -->
+    <string name="owl_time_toast">Owl time!</string>
+    <string name="owl_time_for">It\'s Owl time for</string>
+    <string name="connect_by">Connect with them by</string>
+    <string name="snooze" tools:ignore="TypographyEllipsis">...or snooze one day</string>
+
+    <!-- notification channel info -->
+    <string name="notification_channel_name">OwlNotificationChannel</string>
+    <string name="notification_channel_description">Notification channel for Owl</string>
+
+    <!-- Owl app info -->
+    <string name="contacts_instructions">Owl makes it easy to keep in touch with the people you care about. Start by creating or importing contacts for Owl to help with.
+
+    \n\nSee Options > About Owl for more info.</string>
+    <string name="message_instructions">Owl comes with messages to start from, so you don\'t need to start from scratch thinking about what to say.
+        You can also create your own messages to add to the list of pre-packaged ones to choose from.
+
+    \n\nSee Options > About Owl for more info.</string>
+
+    <!-- Owl app info -->
+    <string name="app_info"><b>Why Owl?</b>
+
+        \n\n\nDo you ever think of someone you care about, without reaching out to let them know?
+
+        \n\n\Do you feel yourself neglecting family members or drifting apart from old friends?
+
+        \n\n\Do you wish you were better at keeping in touch with the important people in your life?
+
+        \n\nIf your answer is to any of these is "yes", you\'re not alone. Owl is here to help.
+
+        \n\nReceiving a message or call can brighten a person\'s day. It shows that someone cares. Someone thought about them. Someone took the time out of their life to reach out. This act can keep our bonds strong and our relationships alive.
+
+        \n\nFor some of us, however, sending a message or giving them a call takes a lot of energy. Whether you\'re someone who spends a lot of effort thinking up what to say, you have an introverted nature that makes regular messaging difficult, or you could just use some assistance in staying on schedule in your communications, Owl helps by:
+
+        \n\n *Notifying you to reach out to people on a regular schedule
+	    \n *Providing pre-written messages to choose from
+        \n *Serving up your chosen message in an app of your choice
+
+        \n\n<b>How to Owl?</b>
+
+        \n\nJust add the people you send Owls to, their preferred messaging app, and how often you want to receive Owl reminders (along with their phone number or other info needed by the preferred messaging app, such as their Skype name).
+
+        \n\nWhen you get an Owl notification for someone, tap it and you\'ll be taken to a menu of messages to choose from. Tap a message, and you\'ll be taken to that person\'s preferred messaging app along with the message you selected. Modify or add to the message, or send it as is. You can also snooze Owl notifications for a day, or just dismiss them until the next one.
+
+        \n\nOptionally, you can import contacts from your phone to easily get their names, phone numbers, and email addresses. You can also add your own messages to the menu of pre-written ones.
+
+        \n\n<b>Thanks Owl!</b>
+
+        \n\nExisting Owl features are and always will be free. Owl is supported by helping keep connections strong and putting positive energy into the world.
+
+        \n\nIf you\'d like to support Owl, you are encourage to do good deeds, donate to a deserving charity, or simply do well in keeping in touch with those that you care about. Share your positive actions, personal stories of maintaining or improving connections, or accounts of how Owl has helped you with the #gavetwohoots hashtag to spread the word and encourage others to take on further positive action. Rating Owl on the app store is also appreciated.
+
+        \n\n<b>Thanks for using Owl. Happy Owling!</b>
+
+        \n\n\n
+    </string>
+
+    <!-- Owl privacy info -->
+    <string name="privacy_info">Owl does <b>not</b> collect or sell any identifying information about you or any of your contacts. Information Owl does <b>not</b> collect includes:
+
+    \n\n*Names
+    \n*Phone Numbers
+    \n*Email Addresses
+    \n*Identifiers for Facebook, Skype, or any other messaging or social media applications
+
+    \n\n\nOwl <b>does</b> collect some information on usage of the app. Information Owl <b>does</b> collect includes:
+
+    \n\n*The number of different contacts created in Owl and how
+    \n*The number of messages created and how often each are used
+    \n*The number of times scheduled Owl notifications have been used for different contacts, along with the associated app preference
+    \n*Diagnostic data about crashes and errors triggered by the app
+
+    \n\nThis information is collected to better understand and improve Owl, fix issues, and provide a better experience for Owl users.</string>
+
+    <string name="acra_toast_text">The application crashed. Sending the crash report by email is appreciated and helps prevent issues in the future.</string>
+    <string name="acra_email_subject">Owl Crash Report</string>
+</resources>

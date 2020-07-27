@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="contactAdapter"
+            type="com.application.owl.adapters.ContactAdapter" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            tools:context=".ContactSelect">
+
+            <!--suppress AndroidUnknownAttribute -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_margin_extra_small"
+                android:layout_marginTop="@dimen/top_margin_extra_small"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/contacts_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/contacts_label" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/contact_select_recycler_view"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/max_height"
+                android:layout_marginStart="@dimen/left_margin_extra_small"
+                android:layout_marginTop="@dimen/top_margin_small_medium"
+                android:layout_marginEnd="@dimen/right_margin_extra_small"
+                android:layout_marginBottom="@dimen/bottom_margin_extra_small"
+                android:adapter="@{contactAdapter}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/no_contacts_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_contacts_message"
+                app:layout_constraintBottom_toBottomOf="@+id/contact_select_recycler_view"
+                app:layout_constraintEnd_toEndOf="@+id/contact_select_recycler_view"
+                app:layout_constraintStart_toStartOf="@+id/contact_select_recycler_view"
+                app:layout_constraintTop_toTopOf="@+id/contact_select_recycler_view" />
+
+            <Button
+                android:id="@+id/create_contact_from_contacts"
+                android:layout_width="@dimen/default_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginEnd="@dimen/right_margin_small"
+                android:background="@color/colorPrimaryDark"
+                android:onClick="createContact"
+                android:text="@string/create_contact_button_label"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/contact_select_recycler_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/no_contacts_message" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

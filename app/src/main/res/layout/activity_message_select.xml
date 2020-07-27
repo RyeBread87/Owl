@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools">
+
+<data>
+    <variable
+        name="messageAdapter"
+        type="com.application.owl.adapters.MessageAdapter" />
+</data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            tools:context=".MessageSelect">
+
+            <!--suppress AndroidUnknownAttribute -->
+
+            <LinearLayout
+                android:id="@+id/messages_linearlayour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_margin_extra_small"
+                android:layout_marginTop="@dimen/top_margin_extra_small"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/messages_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/messages_label" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/messages_recycler_view"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/max_height"
+                android:layout_marginStart="@dimen/left_margin_extra_small"
+                android:layout_marginTop="@dimen/top_margin_small_medium"
+                android:layout_marginEnd="@dimen/right_margin_extra_small"
+                android:layout_marginBottom="@dimen/bottom_margin_extra_small"
+                android:adapter="@{messageAdapter}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/no_messages_message"
+                android:layout_width="@dimen/default_width"
+                android:layout_height="@dimen/default_height"
+                android:text="@string/no_messages_message"
+                app:layout_constraintBottom_toBottomOf="@+id/messages_recycler_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/messages_recycler_view"
+                app:layout_constraintTop_toTopOf="@+id/messages_recycler_view"
+                app:layout_constraintVertical_bias="0.542" />
+
+            <Button
+                android:id="@+id/create_message_from_messages"
+                android:layout_width="@dimen/default_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_margin_small"
+                android:layout_marginEnd="@dimen/right_margin_small"
+                android:background="@color/colorPrimaryDark"
+                android:onClick="createMessage"
+                android:text="@string/create_message_button_label"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/messages_recycler_view"
+                app:layout_constraintEnd_toEndOf="@+id/messages_recycler_view"
+                app:layout_constraintStart_toStartOf="@+id/messages_recycler_view"
+                app:layout_constraintTop_toBottomOf="@+id/no_messages_message" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

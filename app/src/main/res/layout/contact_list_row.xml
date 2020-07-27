@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="contact"
+            type="com.application.owl.models.Contact" />
+
+        <variable
+            name="itemClickListener"
+            type="com.application.owl.clicklisteners.CustomContactClickListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> itemClickListener.editContact(contact)}"
+        android:layout_marginStart="@dimen/edge_margin_small"
+        android:layout_marginEnd="@dimen/edge_margin_small"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical"
+            android:textColor="@android:color/white">
+
+            <TextView
+                android:id="@+id/contact_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{contact.name ?? ""}'
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/contact_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text='@{(contact.status == 1) ? "  Owl Notifications: ON" : "  Notifications: OFF"}' />
+
+            <TextView
+                android:id="@+id/contact_preference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text='@{contact.preference.equals("") ? "  Preference: (no preference)" : "  Preference: " + contact.preference ?? ""}' />
+
+            <TextView
+                android:id="@+id/contact_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text='@{contact.phone.equals("") ? "  Phone: (no phone)" : "  Phone: (" + contact.countryCode + ") " + contact.phone ?? ""}' />
+
+            <TextView
+                android:id="@+id/contact_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text='@{contact.email.equals("") ? "  Email: (no email)" : "  Email: " + contact.email}' />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

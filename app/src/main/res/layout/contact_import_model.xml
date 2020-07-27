@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="com.application.owl.adapters.ContactImportModelAdapter.Listener"/>
+
+        <variable
+            name="model"
+            type="com.application.owl.models.ContactImportModel"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/edge_margin_small"
+        android:layout_marginTop="@dimen/between_margin_extra_small"
+        android:layout_marginEnd="@dimen/edge_margin_small"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="@{view -> listener.onContactImportModelClicked(model)}"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textColor="@android:color/white"
+            android:text="@{model.text}" />
+
+    </LinearLayout>
+
+</layout>
