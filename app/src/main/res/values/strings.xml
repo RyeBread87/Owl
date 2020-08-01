@@ -71,7 +71,7 @@
     <string name="search_contacts_to_import">Search Contacts</string>
     <string name="read_contact_permission_reason">READ_CONTACTS permission required to import contacts</string>
     <string name="loading_contacts">Loading contacts</string>
-    <string name="still_loading_contacts">Still loading contacts...</string>
+    <string name="still_loading_contacts" tools:ignore="TypographyEllipsis">Still loading contacts...</string>
 
 
     <!-- messages tab -->
