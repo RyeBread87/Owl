@@ -26,7 +26,7 @@
     <string name="frequency_label"><b>Frequency:</b></string>
     <string name="frequency_number_of_days_hint"><font size="14"># of days between reminders - 14 by default</font></string>
     <string name="communication_preference_select_label"><b>Communication Preference:</b></string>
-    <string name="selected_start_date_label"><b>First Scheduled Owl:</b></string>
+    <string name="selected_start_date_label"><b>Start Date &amp; Time:</b></string>
     <string name="next_alarm_label"><b>Next Scheduled Owl:</b></string>
     <string name="start_date_button_label">Select Start Date</string>
     <string name="pick_time_button_label">Select Start Time</string>

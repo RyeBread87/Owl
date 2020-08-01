@@ -47,7 +47,7 @@ public class MessageCreator {
         new NotificationScheduler().setAlarm(context, contact.postSnoozeDate, contact);
     }
 
-    // gets the next scheduled notification time (excluding snoozed notifications) to display in ContactEdit
+    // gets the next scheduled notification time (excluding snoozed notifications) to display in setMessageTask & in ContactEdit
     static long getNextAlarmTime(long startTime, long repeatTime) {
         Calendar cal = Calendar.getInstance();
         long now =  cal.getTimeInMillis();
