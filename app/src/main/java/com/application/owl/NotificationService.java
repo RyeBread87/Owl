@@ -109,7 +109,7 @@ public class NotificationService extends JobIntentService {
             return new NotificationCompat.Builder(this.context, CHANNEL_ID)
                     .setContentTitle(getString(R.string.owl_time_for) + " " + contact.getName() + "!")
                     .setContentText(getString(R.string.connect_by) + " " + contact.getPreference())
-                    .setSmallIcon(R.drawable.ic_stat_owl    )
+                    .setSmallIcon(R.drawable.ic_stat_owl)
                     .setColor(getColor(R.color.primary))
                     .setContentIntent(callPendingIntent)
                     .addAction(action)
