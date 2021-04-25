@@ -7,7 +7,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-
 import java.util.Calendar;
 import java.util.List;
 import java.util.Objects;
